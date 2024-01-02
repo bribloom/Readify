@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitemain"
+    tools:context=".activities.PdfDetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/shape_rec2">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:padding="15dp"
+            android:id="@+id/backbutton"
+            android:src="@drawable/arrow_white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="BOOK DETAILS"
+            android:textColor="@color/whitemain"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:fontFamily="@font/groteskreg"
+            android:layout_marginTop="30dp"/>
+
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:layout_above="@+id/booksoptions"
+        android:layout_below="@+id/toolbarRl">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="110dp"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="5dp"
+                    android:id="@+id/pdfRL"
+                    android:background="@color/whitemain">
+
+                    <com.github.barteksc.pdfviewer.PDFView
+                        android:id="@+id/pdfVieww"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                    <ProgressBar
+                        android:id="@+id/progressbd"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </RelativeLayout>
+                 <TextView
+                     android:id="@+id/titleTv"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     style="@style/TextAppearance.MaterialComponents.Headline6"
+                     android:text="TITLE OF BOOK"
+                     android:layout_toEndOf="@+id/pdfRL"
+                     android:fontFamily="@font/groteskreg"
+                     android:textSize="18sp"
+                     android:textColor="@color/black"/>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/titleTv"
+                    android:layout_toEndOf="@id/pdfRL">
+
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/categoryLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:textColor="@color/black"
+                            android:text="Category :"/>
+
+                        <TextView
+                            android:id="@+id/categoryTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:textColor="@color/black"
+                            android:layout_weight="1"
+                            android:text="N/A"/>
+
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/dateLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:textColor="@color/black"
+                            android:text="Date :"/>
+
+                        <TextView
+                            android:id="@+id/dateTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:text="N/A"/>
+
+
+
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/sizeLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:textColor="@color/black"
+                            android:text="Size :"/>
+
+                        <TextView
+                            android:id="@+id/sizeTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:textColor="@color/black"
+                            android:layout_weight="1"
+                            android:text="N/A"/>
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/viewsLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:textColor="@color/black"
+                            android:text="Views :"/>
+
+                        <TextView
+                            android:id="@+id/viewsTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:textColor="@color/black"
+                            android:layout_weight="1"
+                            android:text="N/A"/>
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/downloadsLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:textColor="@color/black"
+                            android:text="Downloads :"/>
+
+                        <TextView
+                            android:id="@+id/dowloadsTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:textColor="@color/black"
+                            android:text="N/A"/>
+
+
+
+
+
+                    </TableRow>
+
+
+                    <TableRow
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/pagesLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:textColor="@color/black"
+                            android:text="Pages :"/>
+
+                        <TextView
+                            android:id="@+id/pagesTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:textColor="@color/black"
+                            android:text="N/A"/>
+
+
+
+
+
+                    </TableRow>
+
+
+
+                </TableLayout>
+
+
+
+
+
+            </RelativeLayout>
+            
+            <TextView
+                android:id="@+id/descriptionTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="THE DESCRIPTION OF THE BOOK"
+                android:textSize="18sp"
+                android:fontFamily="@font/groteskreg"
+                android:textColor="@color/black"/>
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/black"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/groteskreg"
+                    android:padding="15dp"
+                    android:text="Comments"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"/>
+
+                <ImageButton
+                    android:id="@+id/comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="@android:color/transparent"
+                    android:padding="15dp"
+                    android:src="@drawable/add_comment"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/commentRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/whitemain"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/row_comment"
+                    android:layout_below="@+id/comment"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/booksoptions"
+        android:background="@color/black"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/readbookbtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="READ"
+            android:drawableTop="@drawable/menu_book"
+            app:cornerRadius="0dp"
+            android:backgroundTint="@color/black"
+            android:textSize="13sp"
+            android:fontFamily="@font/groteskreg"
+            android:textColor="@color/whitemain"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/downloadbtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="DOWNLOAD"
+            android:drawableTop="@drawable/download"
+            app:cornerRadius="0dp"
+            android:backgroundTint="@color/black"
+            android:textSize="13sp"
+            android:fontFamily="@font/groteskreg"
+            android:textColor="@color/whitemain"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/favbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ADD FAVORITE"
+            android:drawableTop="@drawable/favorite"
+            app:cornerRadius="0dp"
+            android:backgroundTint="@color/black"
+            android:textSize="13sp"
+            android:fontFamily="@font/groteskreg"
+            android:textColor="@color/whitemain"/>
+
+
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

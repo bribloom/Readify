@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitemain"
+    tools:context=".activities.MainActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_centerInParent="true"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/splash" />
+
+    <ImageView
+        android:id="@+id/back_arrow"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/arrowback"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"/>
+    <TextView
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="WELCOME TO READIFY"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/groteskreg"
+        android:layout_marginTop="20dp"/>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/log_in"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LOGIN"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/whitemain"
+        app:strokeColor="@color/black"
+        android:textSize="17sp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="180dp"
+        android:fontFamily="@font/groteskmed"
+        app:cornerRadius="-0dp"
+        app:strokeWidth="1dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/withoutlogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CONTINUE WITHOUT LOGIN"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/whitemain"
+        android:layout_marginHorizontal="15dp"
+        app:strokeColor="@color/black"
+        android:textSize="17sp"
+        android:fontFamily="@font/groteskmed"
+        app:cornerRadius="-0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="130dp"
+        app:strokeWidth="1dp"/>
+
+</RelativeLayout>

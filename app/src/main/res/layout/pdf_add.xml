@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitemain"
+    tools:context=".activities.PdfAddActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/shape_rec04">
+
+        <ImageButton
+            android:id="@+id/backarrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/transparent"
+            android:padding="15dp"
+            android:src="@drawable/arrow_white" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/groteskreg"
+            android:text="ADD A NEW BOOK"
+            android:textColor="@color/whitemain"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/bookmark_add"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Attach File"
+            android:textColor="@color/whitemain"
+            android:fontFamily="@font/groteskreg"
+            android:layout_below="@id/attachfiles"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"/>
+        <ImageButton
+            android:id="@+id/attachfiles"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/transparent"
+            android:padding="15dp"
+            android:src="@drawable/attach_white" />
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="15dp"
+    android:layout_marginTop="235dp"
+    app:hintEnabled="false"
+    android:id="@+id/booktitle">
+
+    <EditText
+        android:id="@+id/pdfbooktitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:drawableStart="@drawable/book"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/groteskreg"
+        android:hint="BOOK TITLE"
+        android:inputType="textPersonName|textCapWords"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="18sp" />
+</com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="5dp"
+        app:hintEnabled="false"
+        android:layout_below="@id/booktitle"
+        android:id="@+id/bookdesc">
+
+        <EditText
+            android:id="@+id/pdfbookdescrip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:drawableStart="@drawable/book"
+            android:drawablePadding="8dp"
+            android:hint="BOOK DESCRIPTION"
+            android:textColorHint="@color/black"
+            android:fontFamily="@font/groteskreg"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:inputType="textPersonName|textCapWords"
+            android:padding="15dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/pdfbookcategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bookdesc"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/border"
+        android:drawableStart="@drawable/category"
+        android:drawableEnd="@drawable/arrow"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        android:hint="BOOK CATEGORY"
+        android:textColorHint="@color/black"
+        android:textSize="18sp"
+        android:fontFamily="@font/groteskreg"
+        android:textColor="@color/black"
+        android:padding="15dp"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/uploadpdf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pdfbookcategory"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="30dp"
+        app:cornerRadius="0dp"
+        android:backgroundTint="@color/black"
+        android:layout_marginTop="8dp"
+        android:text="UPLOAD"
+        android:textSize="18dp"
+        android:fontFamily="@font/groteskreg"
+        android:textColor="@color/whitemain"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_alignParentBottom="true"
+        android:text="Readify"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/groteskreg"
+        android:layout_marginBottom="10dp"/>
+
+
+</RelativeLayout>

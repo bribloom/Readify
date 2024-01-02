@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitemain"
+    android:orientation="vertical"
+    tools:context=".activities.LoginActivity">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/shape_rec04">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/person_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"/>
+    <ImageView
+        android:id="@+id/back_arrow"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/arrow_white"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"/>
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/groteskreg"
+        android:text="LOGIN"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@color/whitemain"
+        android:textSize="25sp" />
+
+
+    <!--
+      <com.airbnb.lottie.LottieAnimationView
+          android:layout_width="250dp"
+          android:layout_height="250dp"
+          app:lottie_autoPlay="true"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="100dp"
+          app:lottie_loop="true"
+          app:lottie_rawRes="@raw/login" />
+
+
+  -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="10dp"
+        app:strokeColor="@color/black"
+        app:strokeWidth="1dp"
+        android:layout_marginBottom="180dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@color/whitemain">
+
+        <EditText
+            android:id="@+id/emaillog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:fontFamily="@font/groteskreg"
+            android:textSize="18dp"
+            android:inputType="text"
+            android:background="@drawable/border"
+            android:drawableLeft="@drawable/email"
+            android:drawablePadding="10dp"
+            android:padding="15dp"/>
+
+        <EditText
+            android:id="@+id/passwordlog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:fontFamily="@font/groteskreg"
+            android:textSize="18dp"
+            android:background="@drawable/border"
+            android:drawableLeft="@drawable/lock"
+            android:drawablePadding="10dp"
+            android:padding="15dp"
+            android:inputType="textPassword"
+            android:layout_marginTop="10dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/loginbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            app:cornerRadius="0dp"
+            android:backgroundTint="@color/black"
+            android:text="LOG IN"
+            android:fontFamily="@font/groteskreg"
+            android:textColor="@color/whitemain"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Forgot Password?"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:fontFamily="@font/groteskreg"
+            android:textSize="16dp"
+            android:id="@+id/forgot"/>
+
+
+    </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/createacc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_alignParentBottom="true"
+        android:text="Create Account"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:fontFamily="@font/groteskreg"
+        android:layout_marginBottom="15dp"/>
+</RelativeLayout>

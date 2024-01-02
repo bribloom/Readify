@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/whitemain"
+    tools:context=".activities.DashboardAdminActivity">
+    
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:id="@+id/toolbarRl"
+        android:background="@drawable/shape_rec2">
+
+        <TextView
+            android:id="@+id/dashtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/groteskreg"
+            android:text="DASHBOARD ADMIN"
+            android:textAlignment="center"
+            android:textColor="@color/whitemain"
+            android:textSize="20dp" />
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:padding="15dp"
+            android:src="@drawable/person_white"
+            android:background="@android:color/transparent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="readify@gmail.comm"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/groteskreg"
+            android:textSize="17sp"
+            android:textColor="@color/whitemain"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@id/dashtitle"
+            android:id="@+id/dashsubtitle"/>
+
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/logout_white"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/dashlogout"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="15dp"/>
+
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/categorysearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbarRl"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/border"
+        android:drawableLeft="@drawable/search"
+        android:drawablePadding="5dp"
+        android:fontFamily="@font/groteskreg"
+        android:hint="Search"
+        android:padding="13dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="15sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/categories"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/add_category"
+        android:layout_below="@+id/categorysearch"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/row_category" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:id="@+id/add_category">
+
+        <TextView
+            android:id="@+id/categorybutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:drawableLeft="@drawable/add"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/groteskreg"
+            android:text="ADD CATEGORY"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="10dp"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addpdfbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pdficon"
+            app:tint="@color/black"
+            app:fabCustomSize="40dp"
+            app:backgroundTint="@color/whitemain"/>
+
+
+
+
+
+    </LinearLayout>
+</RelativeLayout>

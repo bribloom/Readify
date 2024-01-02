@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "954757588699",
+    "project_id": "readify-1abf4",
+    "storage_bucket": "readify-1abf4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:954757588699:android:eb1a65ef634b6dd255cefe",
+        "android_client_info": {
+          "package_name": "com.example.readify"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxPQ0DRQe920F7mGzAQLoKvSOACzSrE4I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
